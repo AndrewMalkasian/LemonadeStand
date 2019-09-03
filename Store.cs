@@ -16,7 +16,7 @@ namespace LemondStandTest
 
         public void BuyItem()
         {
-
+            lemonsCost -= buyingPower
         }
         //push into list that is their inventory
     }

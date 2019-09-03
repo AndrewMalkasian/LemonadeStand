@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemondStandTest
 {
-    class Weather
+   public class Weather
     {
         int temp;
         string forecast;
