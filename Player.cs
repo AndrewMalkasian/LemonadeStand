@@ -7,20 +7,18 @@ namespace LemondStandTest
     
     public class Player
     {
-        float BuyingPower;
-        int Lemons;
-        int Sugar;
-        int IceCubes;
-       
-   
-
+        float buyingPower;
+        int lemons;
+        int sugar;
+        int iceCubes;
 
         public Player(float buyingPower, int lemons, int sugar, int iceCubes)
-        {
-            BuyingPower = buyingPower;
-            Lemons = lemons;
-            Sugar = sugar;
-            IceCubes = iceCubes;
+        { 
+            this.buyingPower = buyingPower;
+            this.lemons = lemons;
+            this.sugar = sugar;
+            this.iceCubes = iceCubes;
+         
             
         }
 
