@@ -4,16 +4,22 @@ using System.Text;
 
 namespace LemondStandTest
 {
-    public class Inventory
+    public class PlayerInventory
     {
         int AmountOfLemons;
         int AmountOfSugar;
         int AmountOfIceCubes;
         
-        public Inventory()
+        
+        public PlayerInventory()
         {
 
         }
+
+        
+
+
+
 
         public void DisplayInventory()
         {
@@ -23,6 +29,11 @@ namespace LemondStandTest
 
 
         }
+
+
+
+
+
 
         
         public void LemonShelfLife()

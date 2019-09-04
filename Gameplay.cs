@@ -6,7 +6,8 @@ namespace LemondStandTest
 {
     public class Gameplay
     {
-        Player playerOne = new Player(20, 0, 0, 0);
+        Player playerOne = new Player();
+        
         
         public Gameplay()
         {
@@ -29,5 +30,6 @@ namespace LemondStandTest
         {
             //TODO: MAKE RULES
         }
+
     }
 }
