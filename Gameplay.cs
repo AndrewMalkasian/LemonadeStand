@@ -29,6 +29,7 @@ namespace LemondStandTest
             if (userInput == "1")
             {
                 UserInterface.PurchasingMenu(playerOne);
+                LemonadeStore.PurchasingMenu(playerOne);
             }
             else
             {

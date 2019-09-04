@@ -7,7 +7,7 @@ namespace LemondStandTest
     
     public class Player
     {
-        public float wallet = 20f;
+        public double wallet = 20f;
         PlayerInventory Inventory = new PlayerInventory(); 
 
              

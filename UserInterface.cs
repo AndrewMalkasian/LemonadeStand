@@ -13,7 +13,7 @@ namespace LemondStandTest
             Console.WriteLine("Please press '1'.");
         }
         
-        public static void PurchasingMenu()
+        public static void PurchasingMenu(Player playerOne)
         {
             Console.WriteLine("You get to Wal-Mart early in the morning before the day");
             Console.WriteLine($"Player's current capital: ${playerOne.wallet}");

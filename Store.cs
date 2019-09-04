@@ -7,34 +7,30 @@ namespace LemondStandTest
     public class Store
     {
         
-        
-        //if(dictionaryStoreInventory.ContainsKey(userInput)) ((instead of switch/multiple if/else) 
-        //{  
-        //  //method to subtract their purchase from the wallet
-        //}
         public Store()
         {
            
           
         } 
-        public void BuyingItems()
-        {
-          //
-        }
         public void PurchasingMenu(Player playerOne)
         {
-            
+       
             string userInput = Console.ReadLine();
-
-
-
+            foreach (StoreItem storeItem in itemsForSale)
+            {
+                if (userInput.Equals(storeItem.keyID))
+                {
+                    Console.WriteLine($"You've purchased {storeItem.name}");
+                    playerOne.wallet -= storeItem.cost;
+                    Console.WriteLine($"You now have {playerOne.wallet} dollars");
+                    UserInterface.PurchasingMenu(playerOne);
+                }
+            };
+                
 
         }
-           
-        
-       
 
-        List<StoreItem> forSale = new List<StoreItem>()
+        List<StoreItem> itemsForSale = new List<StoreItem>()
         {
                 new StoreItem()
                 {
@@ -111,15 +107,17 @@ namespace LemondStandTest
         };
 
 
-
-            
     }
+           
+        
+      
+}
             
         
             
      
             
-}
+
 
         
 
