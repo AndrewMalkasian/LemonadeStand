@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemondStandTest
 {
-    class Recipe
+    public class Recipe
     {
         int lemons;
         int sugar;

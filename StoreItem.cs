@@ -6,15 +6,19 @@ namespace LemondStandTest
 {
     public class StoreItem
     {
-        public string choiceID { get; set; }
-        public string name { get; set; }
-        public double cost { get; set; }
+        public string keyID;
+        public string name;
+        public double cost;
 
+        
 
+      
+        //filter callback function thing for filtering by KeyID
         public StoreItem()
         {
             
-            
+          
         }
+
     }
 }

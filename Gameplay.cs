@@ -6,30 +6,42 @@ namespace LemondStandTest
 {
     public class Gameplay
     {
-        Player playerOne = new Player();
-        
-        
+        public Player playerOne = new Player();
+        public Store LemonadeStore = new Store();
+
+
         public Gameplay()
         {
 
         }
         public void RunGame()
         {
+            UserInterface.MainMenu();
             MainMenu();
-            Rules();
-            
+           
+
 
         }
 
         public void MainMenu()
         {
-            //TODO: MAKE MAINMENU
+            string userInput = Console.ReadLine();
+            if (userInput == "1")
+            {
+                UserInterface.PurchasingMenu(playerOne);
+            }
+            else
+            {
+                UserInterface.MainMenu();
+            }
         }
-
         public void Rules()
         {
             //TODO: MAKE RULES
         }
-
     }
+
+    
+
 }
+

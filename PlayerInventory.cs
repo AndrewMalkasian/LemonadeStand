@@ -6,9 +6,9 @@ namespace LemondStandTest
 {
     public class PlayerInventory
     {
-        int AmountOfLemons;
-        int AmountOfSugar;
-        int AmountOfIceCubes;
+        int AmountOfLemons = 0;
+        int AmountOfSugar = 0;
+        int AmountOfIceCubes = 0;
         
         
         public PlayerInventory()
