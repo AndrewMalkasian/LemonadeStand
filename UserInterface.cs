@@ -18,19 +18,20 @@ namespace LemondStandTest
             Console.WriteLine("You get to Wal-Mart early in the morning before the day");
             Console.WriteLine($"Player's current capital: ${playerOne.wallet}");
             Console.WriteLine("You have the option to buy the following:");
-            Console.WriteLine("1 : 25  Paper Cups   ");
-            Console.WriteLine("2 : 50  Paper Cups   ");
-            Console.WriteLine("3 : 100 Papers Cups  ");
-            Console.WriteLine("4 : 10  Lemons       ");
-            Console.WriteLine("5 : 30  Lemons       ");
-            Console.WriteLine("6 : 70  Lemons       ");
-            Console.WriteLine("7 : 8   Cups of Sugar");
-            Console.WriteLine("8 : 20  Cups of Sugar");
-            Console.WriteLine("9 : 40  Cups of Sugar");
-            Console.WriteLine("10: 100 Ice Cubes    ");
-            Console.WriteLine("11: 200 Ice Cubes    ");
-            Console.WriteLine("12: 500 Ice Cubes    ");
+            Console.WriteLine("1 : 25  Paper Cups    |$  .77");
+            Console.WriteLine("2 : 50  Paper Cups    |$ 1.52");
+            Console.WriteLine("3 : 100 Papers Cups   |$ 2.77");
+            Console.WriteLine("4 : 10  Lemons        |$  .53");
+            Console.WriteLine("5 : 30  Lemons        |$ 2.34");
+            Console.WriteLine("6 : 70  Lemons        |$ 4.06");
+            Console.WriteLine("7 : 8   Cups of Sugar |$  .64");
+            Console.WriteLine("8 : 20  Cups of Sugar |$ 1.61");
+            Console.WriteLine("9 : 40  Cups of Sugar |$ 3.20");
+            Console.WriteLine("10: 100 Ice Cubes     |$  .87");
+            Console.WriteLine("11: 200 Ice Cubes     |$ 1.87");
+            Console.WriteLine("12: 500 Ice Cubes     |$ 3.97");
             Console.WriteLine("---------------------");
+            Console.WriteLine($"NOTE: Last chance to buy! Player's current capital: ${playerOne.wallet}");
             Console.WriteLine("13:Begin the day");
         }
     }

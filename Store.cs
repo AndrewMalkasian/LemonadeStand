@@ -24,6 +24,7 @@ namespace LemondStandTest
                     playerOne.wallet -= storeItem.cost;
                     Console.WriteLine($"You now have {playerOne.wallet} dollars");
                     UserInterface.PurchasingMenu(playerOne);
+                    PurchasingMenu(playerOne);
                 }
             };
                 
@@ -32,12 +33,7 @@ namespace LemondStandTest
 
         List<StoreItem> itemsForSale = new List<StoreItem>()
         {
-                new StoreItem()
-                {
-                    keyID = "1",
-                    name = "25 Paper Cups",
-                    cost = .77
-                },
+                new StoreItem(){ keyID = "1", name = "25 Paper Cups", cost = .77},
                 new StoreItem()
                 {
                     keyID = "2",

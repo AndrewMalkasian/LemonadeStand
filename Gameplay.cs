@@ -18,6 +18,8 @@ namespace LemondStandTest
         {
             UserInterface.MainMenu();
             MainMenu();
+            UserInterface.PurchasingMenu(playerOne);
+            LemonadeStore.PurchasingMenu(playerOne);
            
 
 
