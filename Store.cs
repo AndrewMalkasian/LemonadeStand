@@ -18,7 +18,7 @@ namespace LemondStandTest
             string userInput = Console.ReadLine();
             foreach (StoreItem storeItem in itemsForSale)
             {
-                if (userInput.Equals(storeItem.keyID))
+                if (userInput.Equals(storeItem.keyId))
                 {
                     Console.WriteLine($"You've purchased {storeItem.name}");
                     playerOne.wallet -= storeItem.cost;
@@ -33,73 +33,21 @@ namespace LemondStandTest
 
         List<StoreItem> itemsForSale = new List<StoreItem>()
         {
-                new StoreItem(){ keyID = "1", name = "25 Paper Cups", cost = .77},
-                new StoreItem()
-                {
-                    keyID = "2",
-                    name = "50 Paper Cups",
-                    cost = 1.52
-                },
-                new StoreItem()
-                {
-                    keyID = "3",
-                    name = "100 Paper Cups",
-                    cost = 2.77
-                },
-                new StoreItem()
-                {
-                    keyID = "4",
-                    name = "10 Lemons",
-                    cost = .53
-                },
-                new StoreItem()
-                {
-                    keyID = "5",
-                    name = "30 Lemons",
-                    cost = 2.34
-                },
-                new StoreItem()
-                {
-                    keyID = "6",
-                    name = "70 Lemons",
-                    cost = 4.06
-                },
-                new StoreItem()
-                {
-                    keyID = "7",
-                    name = "8 Cups of Sugar",
-                    cost = .64
-                },
-                new StoreItem()
-                {
-                    keyID = "8",
-                    name = "20 Cups of Sugar",
-                    cost = 1.61
-                },
-                new StoreItem()
-                {
-                    keyID = "9",
-                    name = "40 Cups of Sugar",
-                    cost = 3.20
-                },
-                new StoreItem()
-                {
-                    keyID = "10",
-                    name = "100 Ice Cubes",
-                    cost = .87
-                },
-                new StoreItem()
-                {
-                    keyID = "11",
-                    name = "200 Ice Cubes",
-                    cost = 1.87
-                },
-                new StoreItem()
-                {
-                    keyID = "12",
-                    name = "500 Ice Cubes",
-                    cost = 3.97
-                },
+                new StoreItem("1", "25 Paper Cups",   .77),
+                new StoreItem("2", "50 Paper Cups",  1.52),
+                new StoreItem("3", "100 Paper Cups", 2.77),
+
+                new StoreItem("4", "10 Lemons",  .53),
+                new StoreItem("5", "30 Lemons", 2.34),
+                new StoreItem("6", "70 Lemons", 4.06),
+
+                new StoreItem("7",  "8 Cups of Sugar",  .64),
+                new StoreItem("8", "20 Cups of Sugar", 1.61),
+                new StoreItem("9", "40 Cups of Sugar", 3.20),
+               
+                new StoreItem("10", "100 Ice Cubes", .87),
+                new StoreItem("11", "200 Ice Cubes", 1.87),
+                new StoreItem("12", "500 Ice Cubes", 3.97),
         };
 
 

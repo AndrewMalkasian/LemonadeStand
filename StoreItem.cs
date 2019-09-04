@@ -6,7 +6,7 @@ namespace LemondStandTest
 {
     public class StoreItem
     {
-        public string keyID;
+        public string keyId;
         public string name;
         public double cost;
 
@@ -14,10 +14,13 @@ namespace LemondStandTest
 
       
         //filter callback function thing for filtering by KeyID
-        public StoreItem()
+        public StoreItem(string keyId, string name, double cost)
         {
-            
-          
+            this.keyId = keyId;
+            this.name = name;
+            this.cost = cost;
+
+
         }
 
     }
