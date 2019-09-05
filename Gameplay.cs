@@ -7,7 +7,10 @@ namespace LemondStandTest
     public class Gameplay
     {
         public Player playerOne = new Player();
+        public Inventory inventory = new Inventory();
         public Store LemonadeStore = new Store();
+        public Recipe recipe = new Recipe();
+        
 
 
         public Gameplay()
@@ -16,26 +19,36 @@ namespace LemondStandTest
         }
         public void RunGame()
         {
-            UserInterface.MainMenu();
-            MainMenu();
-            UserInterface.PurchasingMenu(playerOne);
-            LemonadeStore.PurchasingMenu(playerOne);
            
-
+            LemonadeStore.PurchasingMenu(playerOne, inventory);
+          
 
         }
 
-        public void MainMenu()
+        public void StartMenu()
         {
+            //UI.StartMenu();
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
-                UserInterface.PurchasingMenu(playerOne);
-                LemonadeStore.PurchasingMenu(playerOne);
+                LemonadeStore.PurchasingMenu(playerOne, inventory);
             }
             else
             {
-                UserInterface.MainMenu();
+                MainMenu();
+            }
+        }
+        public void MainMenu()
+        {
+            UI.MainMenu();
+            string userInput = Console.ReadLine();
+            if (userInput == "1")
+            {
+                LemonadeStore.PurchasingMenu(playerOne, inventory);
+            }
+            else if (userInput == "2")
+            {
+                
             }
         }
         public void Rules()

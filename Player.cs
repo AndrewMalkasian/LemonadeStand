@@ -7,11 +7,10 @@ namespace LemondStandTest
     
     public class Player
     {
-        public double wallet = 20f;
-        PlayerInventory Inventory = new PlayerInventory(); 
-
-             
        
+
+        public double wallet = 20;
+      
 
         public Player()
         { 
@@ -19,7 +18,10 @@ namespace LemondStandTest
             
         }
 
+        public void StockingInventory()
+        {
 
+        }
        
 
 

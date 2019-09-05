@@ -6,32 +6,19 @@ namespace LemondStandTest
 {
     public class Recipe
     {
-        int lemons;
-        int sugar;
-        int iceCubes;
+        private int recipeLemonsTotal;
+        private int recipeSugarTotal;
+        private int recipeIceCubesTotal;
         public Recipe()
         {
-
+            Console.WriteLine("test");
+            //TODO: Make a method that places recipeLemons from InventoryLemons (sugar,IceCubes)
         }
+         
         //todo: create recipes
-        public void Recipes()
+        public void Recipes(Player playerOne, Inventory inventory)
         {
-            if ((lemons >= 4 && lemons <= 6) && (sugar >= 4 && sugar <= 6))
-            {
-                Console.WriteLine("Great");
-            }
-            if (lemons < 3 || sugar < 3)
-            {
-                Console.WriteLine("Nasty");
-            }
-            else if (lemons > 7 || sugar > 7)
-            {
-                Console.WriteLine("Nasty");
-            }
-            else
-            {
-
-            }
+            recipesLemons;  
         }
         
        

@@ -4,16 +4,16 @@ using System.Text;
 
 namespace LemondStandTest
 {
-    public class PlayerInventory
+    public class Inventory
     {
-        int AmountOfLemons = 0;
-        int AmountOfSugar = 0;
-        int AmountOfIceCubes = 0;
-        
-        
-        public PlayerInventory()
-        {
 
+        public int cupsOwned;
+        public int lemonsOwned;
+        public int sugarOwned;
+        public int iceCubesOwned;
+        public Inventory()
+        {
+           
         }
 
         
@@ -21,21 +21,10 @@ namespace LemondStandTest
 
 
 
-        public void DisplayInventory()
-        {
-            Console.WriteLine($"Lemons: {AmountOfLemons} ");
-            Console.WriteLine($"Sugar: {AmountOfSugar} ");
-            Console.WriteLine($"Ice Cubes: {AmountOfIceCubes} ");
-
-
-        }
 
 
 
 
-
-
-        
         public void LemonShelfLife()
         {
            //TODO: remove from inventory after 1 days

@@ -6,48 +6,92 @@ namespace LemondStandTest
 {
     public class Store
     {
-        
+        public Recipe recipe = new Recipe();
         public Store()
         {
            
           
-        } 
-        public void PurchasingMenu(Player playerOne)
+        }
+        public void BuyOrMakeLemonade(Player playerOne, Inventory inventory)
         {
-       
+            Console.WriteLine("Would you like to (1)buy supplies or (2) Make your lemonade's recipe?");
             string userInput = Console.ReadLine();
-            foreach (StoreItem storeItem in itemsForSale)
+            if (userInput == "1")
             {
-                if (userInput.Equals(storeItem.keyId))
-                {
-                    Console.WriteLine($"You've purchased {storeItem.name}");
-                    playerOne.wallet -= storeItem.cost;
-                    Console.WriteLine($"You now have {playerOne.wallet} dollars");
-                    UserInterface.PurchasingMenu(playerOne);
-                    PurchasingMenu(playerOne);
-                }
-            };
+                PurchasingMenu(playerOne, inventory);
+            }
+            else if (userInput == "2")
+            {
+                recipe.Recipes(playerOne, inventory);
+            }
+            else
+            {
+
+            }
+
+        }
+        public void PurchasingMenu(Player playerOne, Inventory inventory)
+        {
+            BuyOrMakeLemonade(playerOne, inventory);
+            UI.PurchasingMenuOne(playerOne, inventory);
+            string userInput = Console.ReadLine();
                 
+                foreach (StoreItem storeItem in itemsForSaleMenu)
+                {  
+                    if (userInput.Equals(storeItem.keyId))
+                    {   
+                        Console.WriteLine($"You've purchased {storeItem.name}.");
+                        playerOne.wallet -= storeItem.cost;
+                        if (storeItem.name.Contains("Paper Cups"))
+                        {
+                            inventory.cupsOwned += storeItem.totalProductBought;
+            
+                        }
+                        else if (storeItem.name.Contains("Lemons"))
+                        {
+                            inventory.lemonsOwned += storeItem.totalProductBought;
+                            
+                        }
+                        else if (storeItem.name.Contains("Sugar"))
+                        {
+                            inventory.sugarOwned += storeItem.totalProductBought;
+                        }
+                        else if (storeItem.name.Contains("Ice Cube"))
+                        {
+                            inventory.iceCubesOwned += storeItem.totalProductBought;
+                        
+                        }
+               
+                    }
+                        UI.PurchasingMenuTwo(playerOne, inventory);
+                        PurchasingMenu(playerOne,inventory); 
+                };
+
+           
 
         }
 
-        List<StoreItem> itemsForSale = new List<StoreItem>()
+        List<StoreItem> itemsForSaleMenu = new List<StoreItem>()
         {
-                new StoreItem("1", "25 Paper Cups",   .77),
-                new StoreItem("2", "50 Paper Cups",  1.52),
-                new StoreItem("3", "100 Paper Cups", 2.77),
 
-                new StoreItem("4", "10 Lemons",  .53),
-                new StoreItem("5", "30 Lemons", 2.34),
-                new StoreItem("6", "70 Lemons", 4.06),
 
-                new StoreItem("7",  "8 Cups of Sugar",  .64),
-                new StoreItem("8", "20 Cups of Sugar", 1.61),
-                new StoreItem("9", "40 Cups of Sugar", 3.20),
-               
-                new StoreItem("10", "100 Ice Cubes", .87),
-                new StoreItem("11", "200 Ice Cubes", 1.87),
-                new StoreItem("12", "500 Ice Cubes", 3.97),
+                new StoreItem("1", "25 Paper Cups",   .77, 25),
+                new StoreItem("2", "50 Paper Cups",  1.52, 50),
+                new StoreItem("3", "100 Paper Cups", 2.77, 100),
+
+                new StoreItem("4", "10 Lemons",  .53, 10),
+                new StoreItem("5", "30 Lemons", 2.34, 30),
+                new StoreItem("6", "70 Lemons", 4.06, 70),
+
+                new StoreItem("7",  "8 Cups of Sugar",  .64, 8),
+                new StoreItem("8", "20 Cups of Sugar", 1.61, 20),
+                new StoreItem("9", "40 Cups of Sugar", 3.20, 40),
+
+                new StoreItem("10", "100 Ice Cubes", .87,  100),
+                new StoreItem("11", "200 Ice Cubes", 1.87, 200),
+                new StoreItem("12", "500 Ice Cubes", 3.97, 500),
+
+                new StoreItem ("14", "Recipe",0,0),
         };
 
 
