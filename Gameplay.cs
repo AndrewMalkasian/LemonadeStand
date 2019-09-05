@@ -7,8 +7,7 @@ namespace LemondStandTest
     public class Gameplay
     {
         public Player playerOne = new Player();
-        public Inventory inventory = new Inventory();
-        public Store LemonadeStore = new Store();
+       
         
         
 
@@ -19,8 +18,8 @@ namespace LemondStandTest
         }
         public void RunGame()
         {
-           
-            LemonadeStore.PurchasingMenu(playerOne, inventory);
+
+            playerOne.LemonadeStore.BuyOrMakeLemonade(playerOne);
           
 
         }
@@ -31,7 +30,7 @@ namespace LemondStandTest
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
-                LemonadeStore.PurchasingMenu(playerOne, inventory);
+                playerOne.LemonadeStore.PurchasingMenu(playerOne);
             }
             else
             {
@@ -44,7 +43,7 @@ namespace LemondStandTest
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
-                LemonadeStore.PurchasingMenu(playerOne, inventory);
+                playerOne.LemonadeStore.PurchasingMenu(playerOne);
             }
             else if (userInput == "2")
             {

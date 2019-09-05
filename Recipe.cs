@@ -43,17 +43,26 @@ namespace LemondStandTest
         public string MainRecipe(Player playerOne)
         {
 
-           if((playerOne.recipe.recipeLemonsTotal >= 1 && playerOne.recipe.recipeLemonsTotal <= 5 ) && (playerOne.recipe.recipeSugarTotal >= 1 && playerOne.recipe.recipeSugarTotal <= 5) && playerOne.recipe.recipeIceCubesTotal > 0)
-           {
-
+            LemonRecipe(playerOne);
+            SugarRecipe(playerOne);
+            IceCubesRecipe(playerOne);
+            RecipePrinted(playerOne);
+            if ((playerOne.recipe.recipeLemonsTotal >= 1 && playerOne.recipe.recipeLemonsTotal <= 5) && (playerOne.recipe.recipeSugarTotal >= 1 && playerOne.recipe.recipeSugarTotal <= 5) && playerOne.recipe.recipeIceCubesTotal > 0)
+            {
+                Console.WriteLine("grandma's recipe");
                 return grandmasRecipe;
 
-           }
+            }
+            
+
+           
             else
             {
+                Console.WriteLine("yucky recipe ");
                 return yuckyRecipe;
             }
-
+           
+           
         }
 
         //most likely goes into UI

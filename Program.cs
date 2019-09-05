@@ -6,8 +6,8 @@ namespace LemondStandTest
     {
         static void Main(string[] args)
         {
-            Gameplay LemonadeStandGame = new Gameplay();
-            LemonadeStandGame.RunGame();
+           Gameplay LemonadeStand = new Gameplay();
+            LemonadeStand.RunGame();
 
         }
     }

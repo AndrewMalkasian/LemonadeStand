@@ -22,21 +22,20 @@ namespace LemondStandTest
             }
             else if (userInput == "2")
             {
-                recipe.Recipes(playerOne);
+                playerOne.recipe.MainRecipe(playerOne);
             }
             else
             {
-
+                BuyOrMakeLemonade(playerOne);
             }
 
         }
         public void PurchasingMenu(Player playerOne)
         {
-            BuyOrMakeLemonade(playerOne);
+           
             UI.PurchasingMenuOne(playerOne);
             string userInput = Console.ReadLine();
-                
-                foreach (StoreItem storeItem in itemsForSaleMenu)
+            foreach (StoreItem storeItem in itemsForSaleMenu)
                 {  
                     if (userInput.Equals(storeItem.keyId))
                     {   
@@ -63,11 +62,11 @@ namespace LemondStandTest
                         }
                
                     }
-                        UI.PurchasingMenuTwo(playerOne);
-                        PurchasingMenu(playerOne); 
-                };
+                       
+            };
 
-           
+                    UI.PurchasingMenuTwo(playerOne);
+                    BuyOrMakeLemonade(playerOne);
 
         }
 

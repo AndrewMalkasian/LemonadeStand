@@ -39,6 +39,7 @@ namespace LemondStandTest
             Console.WriteLine("10: 100 Ice Cubes     |$  .87");
             Console.WriteLine("11: 200 Ice Cubes     |$ 1.87");
             Console.WriteLine("12: 500 Ice Cubes     |$ 3.97");
+           
         }
 
 
