@@ -20,7 +20,7 @@ namespace LemondStandTest
         }
 
        
-        public static void PurchasingMenuOne(Player playerOne, Inventory inventory)
+        public static void PurchasingMenuOne(Player playerOne)
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("You get to Wal-Mart early in the morning before the day");

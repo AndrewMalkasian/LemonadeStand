@@ -13,31 +13,29 @@ namespace LemondStandTest
         public string yuckyRecipe;
         public Recipe()
         {
-            Console.WriteLine("test");
-            //TODO: Make a method that places recipeLemons from InventoryLemons (sugar,IceCubes)
+      
+     
         }
-         
-        //todo: create recipes
         public void LemonRecipe(Player playerOne)
         {
             Console.WriteLine("How many Lemons should you use?");
             int userInput = Convert.ToInt32(Console.ReadLine());
-            recipeLemonsTotal = userInput;
-            playerOne.inventory.lemonsOwned -= recipeLemonsTotal;  
+            playerOne.recipe.recipeLemonsTotal = userInput;
+            playerOne.inventory.lemonsOwned -= playerOne.recipe.recipeLemonsTotal;  
         }
         public void SugarRecipe(Player playerOne)
         {
             Console.WriteLine("How many Sugar should you use?");
             int userInput = Convert.ToInt32(Console.ReadLine());
-            recipeSugarTotal = userInput;
-            playerOne.inventory.lemonsOwned -= recipeSugarTotal;
+            playerOne.recipe.recipeSugarTotal = userInput;
+            playerOne.inventory.lemonsOwned -= playerOne.recipe.recipeSugarTotal;
         }
         public void IceCubesRecipe(Player playerOne)
         {
             Console.WriteLine("How many Ice Cubes should you use?");
             int userInput = Convert.ToInt32(Console.ReadLine());
-            recipeIceCubesTotal = userInput;
-            playerOne.inventory.lemonsOwned -= recipeIceCubesTotal;
+            playerOne.recipe.recipeIceCubesTotal = userInput;
+            playerOne.inventory.lemonsOwned -= playerOne.recipe.recipeIceCubesTotal;
         }
 
        
@@ -57,7 +55,17 @@ namespace LemondStandTest
             }
 
         }
-        
+
+        //most likely goes into UI
+        public void RecipePrinted(Player playerOne)
+        {
+            Console.WriteLine($"Total Lemons in Recipe:        {playerOne.recipe.recipeLemonsTotal}   ");
+            Console.WriteLine($"Total Cups of Sugar in Recipe: {playerOne.recipe.recipeSugarTotal}    ");
+            Console.WriteLine($"Total Ice Cubes in Recipe:     {playerOne.recipe.recipeIceCubesTotal} ");
+
+
+        }
+
 
 
     }

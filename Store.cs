@@ -12,17 +12,17 @@ namespace LemondStandTest
            
           
         }
-        public void BuyOrMakeLemonade(Player playerOne, Inventory inventory)
+        public void BuyOrMakeLemonade(Player playerOne)
         {
             Console.WriteLine("Would you like to (1)buy supplies or (2) Make your lemonade's recipe?");
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
-                PurchasingMenu(playerOne, inventory);
+                PurchasingMenu(playerOne);
             }
             else if (userInput == "2")
             {
-                recipe.Recipes(playerOne, inventory);
+                recipe.Recipes(playerOne);
             }
             else
             {
