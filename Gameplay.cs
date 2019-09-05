@@ -9,7 +9,7 @@ namespace LemondStandTest
         public Player playerOne = new Player();
         public Inventory inventory = new Inventory();
         public Store LemonadeStore = new Store();
-        public Recipe recipe = new Recipe();
+        
         
 
 

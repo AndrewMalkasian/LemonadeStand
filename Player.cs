@@ -8,6 +8,7 @@ namespace LemondStandTest
     public class Player
     {
         public Inventory inventory = new Inventory();
+        public Recipe recipe = new Recipe();
 
         public double wallet = 20;
       

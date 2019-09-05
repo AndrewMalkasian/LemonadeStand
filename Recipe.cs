@@ -6,9 +6,11 @@ namespace LemondStandTest
 {
     public class Recipe
     {
-        private int recipeLemonsTotal;
-        private int recipeSugarTotal;
-        private int recipeIceCubesTotal;
+        public int recipeLemonsTotal;
+        public int recipeSugarTotal;
+        public int recipeIceCubesTotal;
+        public string grandmasRecipe;
+        public string yuckyRecipe;
         public Recipe()
         {
             Console.WriteLine("test");
@@ -16,12 +18,47 @@ namespace LemondStandTest
         }
          
         //todo: create recipes
-        public void Recipes(Player playerOne)
+        public void LemonRecipe(Player playerOne)
         {
-            userInput = Console.ReadLine();
-           playerOne.inventory.cupsOwned -= rec  
+            Console.WriteLine("How many Lemons should you use?");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            recipeLemonsTotal = userInput;
+            playerOne.inventory.lemonsOwned -= recipeLemonsTotal;  
+        }
+        public void SugarRecipe(Player playerOne)
+        {
+            Console.WriteLine("How many Sugar should you use?");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            recipeSugarTotal = userInput;
+            playerOne.inventory.lemonsOwned -= recipeSugarTotal;
+        }
+        public void IceCubesRecipe(Player playerOne)
+        {
+            Console.WriteLine("How many Ice Cubes should you use?");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            recipeIceCubesTotal = userInput;
+            playerOne.inventory.lemonsOwned -= recipeIceCubesTotal;
+        }
+
+       
+
+        public string MainRecipe(Player playerOne)
+        {
+
+           if((playerOne.recipe.recipeLemonsTotal >= 1 && playerOne.recipe.recipeLemonsTotal <= 5 ) && (playerOne.recipe.recipeSugarTotal >= 1 && playerOne.recipe.recipeSugarTotal <= 5) && playerOne.recipe.recipeIceCubesTotal > 0)
+           {
+
+                return grandmasRecipe;
+
+           }
+            else
+            {
+                return yuckyRecipe;
+            }
+
         }
         
-       
+
+
     }
 }
