@@ -30,10 +30,10 @@ namespace LemondStandTest
             }
 
         }
-        public void PurchasingMenu(Player playerOne, Inventory inventory)
+        public void PurchasingMenu(Player playerOne)
         {
-            BuyOrMakeLemonade(playerOne, inventory);
-            UI.PurchasingMenuOne(playerOne, inventory);
+            BuyOrMakeLemonade(playerOne);
+            UI.PurchasingMenuOne(playerOne);
             string userInput = Console.ReadLine();
                 
                 foreach (StoreItem storeItem in itemsForSaleMenu)
@@ -44,27 +44,27 @@ namespace LemondStandTest
                         playerOne.wallet -= storeItem.cost;
                         if (storeItem.name.Contains("Paper Cups"))
                         {
-                            inventory.cupsOwned += storeItem.totalProductBought;
+                            playerOne.inventory.cupsOwned += storeItem.totalProductBought;
             
                         }
                         else if (storeItem.name.Contains("Lemons"))
                         {
-                            inventory.lemonsOwned += storeItem.totalProductBought;
+                            playerOne.inventory.lemonsOwned += storeItem.totalProductBought;
                             
                         }
                         else if (storeItem.name.Contains("Sugar"))
                         {
-                            inventory.sugarOwned += storeItem.totalProductBought;
+                            playerOne.inventory.sugarOwned += storeItem.totalProductBought;
                         }
                         else if (storeItem.name.Contains("Ice Cube"))
                         {
-                            inventory.iceCubesOwned += storeItem.totalProductBought;
+                            playerOne.inventory.iceCubesOwned += storeItem.totalProductBought;
                         
                         }
                
                     }
-                        UI.PurchasingMenuTwo(playerOne, inventory);
-                        PurchasingMenu(playerOne,inventory); 
+                        UI.PurchasingMenuTwo(playerOne);
+                        PurchasingMenu(playerOne); 
                 };
 
            

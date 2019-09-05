@@ -16,9 +16,10 @@ namespace LemondStandTest
         }
          
         //todo: create recipes
-        public void Recipes(Player playerOne, Inventory inventory)
+        public void Recipes(Player playerOne)
         {
-            recipesLemons;  
+            userInput = Console.ReadLine();
+           playerOne.inventory.cupsOwned -= rec  
         }
         
        

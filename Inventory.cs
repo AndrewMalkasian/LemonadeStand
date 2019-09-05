@@ -13,7 +13,8 @@ namespace LemondStandTest
         public int iceCubesOwned;
         public Inventory()
         {
-           
+        
+            
         }
 
         

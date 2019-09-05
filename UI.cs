@@ -42,16 +42,16 @@ namespace LemondStandTest
         }
 
 
-        public static void PurchasingMenuTwo(Player playerOne, Inventory inventory)
+        public static void PurchasingMenuTwo(Player playerOne)
         {
             Console.WriteLine("---------------------");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("--CURRENT INVENTORY--");
             Console.WriteLine($"NOTE: Last chance to buy! Player's current capital: ${playerOne.wallet}");
-            Console.WriteLine($"Cups: {inventory.cupsOwned}");
-            Console.WriteLine($"Lemons: {inventory.lemonsOwned}");
-            Console.WriteLine($"Cups o' Sugar: {inventory.sugarOwned}");
-            Console.WriteLine($"Ice Cubes: {inventory.iceCubesOwned}");
+            Console.WriteLine($"Cups: {playerOne.inventory.cupsOwned}");
+            Console.WriteLine($"Lemons: {playerOne.inventory.lemonsOwned}");
+            Console.WriteLine($"Cups o' Sugar: {playerOne.inventory.sugarOwned}");
+            Console.WriteLine($"Ice Cubes: {playerOne.inventory.iceCubesOwned}");
     
         }
            
