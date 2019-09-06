@@ -8,7 +8,7 @@ namespace LemondStandTest
     {
 
 
-        List<CustomerTraits> customers = new List<CustomerTraits>()
+       public List<CustomerTraits> customers = new List<CustomerTraits>()
         {
             new CustomerTraits("Uma Bob"     , "Yucky Recipe"     , "Sunny" , 68),
             new CustomerTraits("Ash Ketchup" , "Grandma's Recipe" , "Sunny" , 74),
@@ -21,61 +21,64 @@ namespace LemondStandTest
         
         public List<CustomerTraits> FilterByWeather(List<CustomerTraits> buyingCustomers)
         {
-            buyingCustomers.FindAll(Cust => Cust.weather == "sunny");
-            foreach (CustomerTraits customer in customers)
+            //customers.FindAll(Cust => Cust.weather == "sunny");
+            //return buyingCustomers;
+            //foreach (CustomerTraits customer in customers)
+            //{
+            //    Console.WriteLine(buyingCustomers);
+            //}
+            //return buyingCustomers;
+
+        }
+
+
+
+        public List<CustomerTraits> FilterByWeather2(List<CustomerTraits> potentialCustomers, Weather weather)
+        {
+            List<CustomerTraits> buyingCustomers = new List<CustomerTraits>();
+
+            foreach (CustomerTraits customer in potentialCustomers)
             {
-                Console.WriteLine(buyingCustomers);
+                if (customer.weather.Equals(weather.theWeather))
+                {
+                    buyingCustomers.Add(customer);
+                }
             }
             return buyingCustomers;
+
+            //for(int i = 0; i < potentialCustomers.Count; i++)
+            //{
+            //    // do the stuff
+            //}
+            //return buyingCustomers;
+            //}
+            public List<CustomerTraits> FilterByRecipe(List<CustomerTraits> potentialCustomers, Recipe recipe)
+            {
+                List<CustomerTraits> buyingCustomers = new List<CustomerTraits>();
+                foreach (CustomerTraits customer in customers)
+                {
+                    if (customer.recipe.Equals(Recipe.recipe))
+                    {
+                        buyingCustomers.Add(customer);
+                    }
+                }
+                return buyingCustomers;
+
+            }
         }
-            
-        //public List<CustomerTraits> FilterByWeather(List<CustomerTraits> buyingCustomers)
-        //{
-
-        //    foreach (CustomerTraits customer in customers)
-        //    {
-        //        if (customer.weather.Equals(Weather.thedaysweather))
-        //        {
-        //            buyingCustomers.Add(customer);
-        //        }
-        //    }
-        //    return buyingCustomers;
-        //}
-        //public List<CustomerTraits> FilterByRecipe(List<CustomerTraits> buyingCustomers)
-        //{
-
-        //    foreach (CustomerTraits customer in customers)
-        //    {
-        //        if (customer.recipe.Equals(Weather.thedaysweather))
-        //        {
-        //            buyingCustomers.Add(customer);
-        //        }
-        //    }
-        //    return buyingCustomers;
-
-        //}
-       
+            public void CustomersThatBought(List<CustomerTraits> buyingCustomers)
+            {
+                foreach (CustomerTraits customer in buyingCustomers)
+                {
+                    Console.WriteLine(customer.name);
+                };
+            }
     }
 
 
 
 
-    public class CustomerTraits
-    {
-       public string name;
-       public string recipe;
-       public string weather;
-       public int temp;
-        public CustomerTraits(string name, string recipe, string weather, int temp)
-        {
-
-            this.name = name;
-            this.recipe = recipe;
-            this.weather = weather;
-            this.temp = temp;
-
-        }
-    }
+   
 }
 
 

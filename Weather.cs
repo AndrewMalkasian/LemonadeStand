@@ -6,10 +6,8 @@ namespace LemondStandTest
 {
     public class Weather
     {
-        int temp;
-        string forecast;
-        string sunshine;
-        
+
+        public string theWeather = "Sunny";
         public Weather()
         {
 
@@ -19,10 +17,10 @@ namespace LemondStandTest
         {
 
             Random random = new Random();
-            List<string> weatherForecast = new List<string> { "Sunny", "Cloudy", };
-            int index = random.Next(weatherForecast.Count);
-            var realForecast = weatherForecast[index];
-        }
+            List<string> weatherforecast = new List<string> { "sunny", "cloudy", };
+            int i = random.Next(weatherforecast.Count);
+            Console.WriteLine(weatherforecast[i]);
+          
 
     }
 }

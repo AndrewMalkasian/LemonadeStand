@@ -49,7 +49,7 @@ namespace LemondStandTest
             SugarRecipe(playerOne);
             IceCubesRecipe(playerOne);
             RecipePrinted(playerOne);
-            StartTheDay();
+           
             
            
            
@@ -77,14 +77,9 @@ namespace LemondStandTest
 
         }
 
-        public void StartTheDay()
-        {
-            Console.WriteLine("Let's start the day!");
-            List<CustomerTraits> buyingCustomers = null;
-            day.customer.FilterByWeather(buyingCustomers);
-        }
+       
 
-
+        
 
     }
 }

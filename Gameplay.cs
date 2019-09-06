@@ -6,8 +6,10 @@ namespace LemondStandTest
 {
     public class Gameplay
     {
-        public Player playerOne = new Player();
+        public Player playerOne;
         public Day day = new Day();
+        public Customer customer = new Customer();
+        public Weather weather = new Weather();
        
         
         
@@ -15,12 +17,13 @@ namespace LemondStandTest
 
         public Gameplay()
         {
-
+            playerOne = new Player();
         }
         public void RunGame()
         {
-
+            StartMenu();
             playerOne.LemonadeStore.BuyOrMakeLemonade(playerOne);
+            //StartTheDay();
           
 
         }
@@ -54,6 +57,12 @@ namespace LemondStandTest
         public void Rules()
         {
             //TODO: MAKE RULES
+        }
+        public void StartTheDay(List<CustomerTraits> buyingCustomers)
+        {
+            Console.WriteLine("Let's start the day!");
+            buyingCustomers.Clear();
+            customer.FilterByWeather(buyingCustomers);
         }
     }
 
