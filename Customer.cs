@@ -1,66 +1,88 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Linq;
 namespace LemondStandTest
 {
     public class Customer
     {
-        public string name;
-        private bool WillBuy
 
 
-
-        Customer CustomerOne = new Customer("Bitter", "Thunderstorm");
-        Customer CustomerTwo = new Customer("Sweet", "Cloudy");
-        Customer CustomerThree = new Customer("Great", "Clear");
-        Customer CustomerFour = new Customer("Great", "Clear");
-        Customer CustomerFive = new Customer("Great", "Clear");
-        Customer CustomerSix = new Customer("Great", "Clear");
-        Customer CustomerSeven = new Customer("Sweet", "Clear");
-        Customer CustomerEight = new Customer("TooSweet", "Clear");
-        Customer CustomerNine = new Customer("Great", "Rainy");
-        Customer CustomerTen = new Customer("Great", "Rainy");
-
-
-
-        //public Customer(string favRecipe, string favForecast) 
-        //{
-        //    FavRecipe = favRecipe;
-        //    FavForecast = favForecast;
-
-        //}
-
-        //todo: create random generators
-
-        public void CallingCustomers()
+        List<CustomerTraits> customers = new List<CustomerTraits>()
         {
+            new CustomerTraits("Uma Bob"     , "Yucky Recipe"     , "Sunny" , 68),
+            new CustomerTraits("Ash Ketchup" , "Grandma's Recipe" , "Sunny" , 74),
+            new CustomerTraits("Greg Manly"  , "Grandma's Recipe" , "Sunny" , 72),
+            new CustomerTraits("The One"     , "Yucky Recipe"     , "Cloudy", 70),
+            new CustomerTraits("Stacy's Dad" , "Grandma's Recipe" , "Cloudy", 45),
+            new CustomerTraits("Reggie White", "Grandma's Recipe" , "Sunny" , 10),
+        };
 
-
-
+        
+        public List<CustomerTraits> FilterByWeather(List<CustomerTraits> buyingCustomers)
+        {
+            buyingCustomers.FindAll(Cust => Cust.weather == "sunny");
+            foreach (CustomerTraits customer in customers)
+            {
+                Console.WriteLine(buyingCustomers);
+            }
+            return buyingCustomers;
         }
-
-        //public void RandomGenerator()
+            
+        //public List<CustomerTraits> FilterByWeather(List<CustomerTraits> buyingCustomers)
         //{
 
-        //    Random Customers = new Random();
+        //    foreach (CustomerTraits customer in customers)
+        //    {
+        //        if (customer.weather.Equals(Weather.thedaysweather))
+        //        {
+        //            buyingCustomers.Add(customer);
+        //        }
+        //    }
+        //    return buyingCustomers;
+        //}
+        //public List<CustomerTraits> FilterByRecipe(List<CustomerTraits> buyingCustomers)
+        //{
 
-        //    var list = LemonadeBuyers.Next(0, 10);
-
-        //    Customers = RPSLS[list];
-
+        //    foreach (CustomerTraits customer in customers)
+        //    {
+        //        if (customer.recipe.Equals(Weather.thedaysweather))
+        //        {
+        //            buyingCustomers.Add(customer);
+        //        }
+        //    }
+        //    return buyingCustomers;
 
         //}
-
-
+       
     }
 
 
 
 
+    public class CustomerTraits
+    {
+       public string name;
+       public string recipe;
+       public string weather;
+       public int temp;
+        public CustomerTraits(string name, string recipe, string weather, int temp)
+        {
 
+            this.name = name;
+            this.recipe = recipe;
+            this.weather = weather;
+            this.temp = temp;
 
-
-
-
+        }
+    }
 }
+
+
+
+
+
+
+
+
+

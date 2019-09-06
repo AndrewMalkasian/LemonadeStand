@@ -7,6 +7,7 @@ namespace LemondStandTest
     public class Gameplay
     {
         public Player playerOne = new Player();
+        public Day day = new Day();
        
         
         

@@ -14,7 +14,7 @@ namespace LemondStandTest
         }
         public void BuyOrMakeLemonade(Player playerOne)
         {
-            Console.WriteLine("Would you like to (1)buy supplies or (2) Make your lemonade's recipe?");
+            Console.WriteLine("Would you like to (1)buy supplies, (2) Make your lemonade's recipe?");
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
