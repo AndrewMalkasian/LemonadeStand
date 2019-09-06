@@ -18,7 +18,7 @@ namespace LemondStandTest
 
         public void TheDayBegins()
         {
-            weather.TrueWeather()  //bring the weather
+            weather.TrueWeather(); //bring the weather
 
 
             //import the recipe

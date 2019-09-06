@@ -7,9 +7,9 @@ namespace LemondStandTest
     public class Gameplay
     {
         public Player playerOne;
-        public Day day = new Day();
-        public Customer customer = new Customer();
-        public Weather weather = new Weather();
+        public Day day;
+        public Customer customer;
+        public Weather weather;
        
         
         
@@ -18,6 +18,10 @@ namespace LemondStandTest
         public Gameplay()
         {
             playerOne = new Player();
+            day = new Day();
+            customer = new Customer();
+            weather = new Weather();
+
         }
         public void RunGame()
         {
@@ -58,11 +62,11 @@ namespace LemondStandTest
         {
             //TODO: MAKE RULES
         }
-        public void StartTheDay(List<CustomerTraits> buyingCustomers)
+        public void StartTheDay( List<CustomerTraits> buyingCustomers, List<CustomerTraits> potentialCustomers, Weather weather, Player playerOne)
         {
             Console.WriteLine("Let's start the day!");
             buyingCustomers.Clear();
-            customer.FilterByWeather(buyingCustomers);
+            customer.TestMethod(buyingCustomers, potentialCustomers, weather, playerOne);
         }
     }
 
