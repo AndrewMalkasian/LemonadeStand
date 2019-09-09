@@ -92,6 +92,15 @@ namespace LemondStandTest
             return int.Parse(Console.ReadLine());
 
         }
+
+        public static void StartingInventoryView(Player playerOne)
+        {
+            Console.WriteLine($"Cups: {playerOne.inventory.cupsOwned}");
+            Console.WriteLine($"Lemons: {playerOne.inventory.lemonsOwned}");
+            Console.WriteLine($"Cups o' Sugar: {playerOne.inventory.sugarOwned}");
+            Console.WriteLine($"Ice Cubes: {playerOne.inventory.iceCubesOwned}");
+        }
+
         public static void Rules()
         {
             //TODO: MAKE RULES

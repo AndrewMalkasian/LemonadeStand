@@ -29,7 +29,7 @@ namespace LemondStandTest
             }
             else
             {
-                Console.WriteLine("You only have the stamina to go 21 days.");
+                Console.WriteLine("You only have the stamina to go 7 days.");
                 RunGame();
             }
 
