@@ -12,7 +12,7 @@ namespace LemondStandTest
         public Store store = new Store();
 
         public double wallet = 20;
-      
+
 
         public Player()
         { 

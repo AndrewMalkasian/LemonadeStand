@@ -68,27 +68,19 @@ namespace LemondStandTest
         {
             FilterByWeather(potentialCustomers, weather);
             FilterByRecipe(potentialCustomers, buyingCustomers, playerOne);
-            CustomersThatBought(buyingCustomers);
+            CustomersThatBought(buyingCustomers, playerOne);
 
         }
-        public void CustomersThatBought(List<CustomerTraits> buyingCustomers)
+        public void CustomersThatBought(List<CustomerTraits> buyingCustomers, Player playerOne)
         {
             foreach (CustomerTraits customer in buyingCustomers)
             {
                 Console.WriteLine(customer.name);
+                playerOne.wallet += customer.walletSize;
+                Console.WriteLine($"{customer.walletSize} has been added to your Player wallet {playerOne.wallet}");
+                
+
             };
-        }
-
-        public void CustomersBuyingPower(List<CustomerTraits> buyingCustomers)
-        {
-            foreach (CustomerTraits customer in buyingCustomers)
-            {
-
-            }
-        }
-        public void TheCustomersArrive()
-        {
-            //the customers are filtered according to the weather and recipe and money is placed into the pocket of the player
         }
 
         public void DayEnds()
@@ -96,7 +88,8 @@ namespace LemondStandTest
             //earnings = multiple the List.(count) * Lemonade
             //display resultshj
         }
-
-
     }
+ 
+
+       
 }

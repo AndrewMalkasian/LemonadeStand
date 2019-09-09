@@ -9,7 +9,7 @@ namespace LemondStandTest
         public Player playerOne;
         public Day day;
         public string recipeCreated;
-
+        public int daysPlaying;
 
         public Gameplay()
         {
@@ -19,7 +19,19 @@ namespace LemondStandTest
         }
         public void RunGame()
         {
-            BuyOrMakeLemonade(playerOne);
+            int userInput = UI.AskForTheNumberOfPlayDays();
+            if (userInput <= 7)
+            { 
+                for (byte i = 0; i < userInput; i++)
+                {
+                    BuyOrMakeLemonade(playerOne);
+                }
+            }
+            else
+            {
+                Console.WriteLine("You only have the stamina to go 21 days.");
+                RunGame();
+            }
 
 
             //StartTheDay();
@@ -81,8 +93,8 @@ namespace LemondStandTest
 
             };
 
-            //UI.PurchasingMenuTwo(playerOne);
-            //BuyOrMakeLemonade(playerOne);
+            UI.PurchasingMenuTwo(playerOne);
+            BuyOrMakeLemonade(playerOne);
 
         }
 
@@ -99,24 +111,20 @@ namespace LemondStandTest
         //        MainMenu();
         //    }
         //}
-        public void MainMenu()
-        {
-            UI.MainMenu();
-            string userInput = Console.ReadLine();
-            if (userInput == "1")
-            {
-                PurchasingMenu(playerOne);
-            }
-            else if (userInput == "2")
-            {
-                UI.Rules();
-            }
-        }
-
+        //public void MainMenu()
+        //{
+        //    int userInput = UI.MainMenu();
+           
+               
+                    
+        //}
 
     }
 
 
-
 }
+
+
+
+
 

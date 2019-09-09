@@ -42,8 +42,6 @@ namespace LemondStandTest
             playerOne.inventory.lemonsOwned -= playerOne.recipe.recipeIceCubesTotal;
         }
 
-       
-
         public void MainRecipe(Player playerOne)
         {
 
@@ -51,8 +49,6 @@ namespace LemondStandTest
             SugarRecipe(playerOne);
             IceCubesRecipe(playerOne);
             recipeCreated = UI.RecipePrinted(playerOne);
-            
-            
            
         }
 

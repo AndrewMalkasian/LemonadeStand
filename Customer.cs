@@ -12,22 +12,17 @@ namespace LemondStandTest
       
         }
 
-
+        
 
         
         
     }
 
 
-
-    //for(int i = 0; i < buyingCustomers.Count; i++)
-    //{
-    //    // do the stuff
-    //}
-    //return buyingCustomers;
-    //}
-
 }
+
+
+
 
 
 

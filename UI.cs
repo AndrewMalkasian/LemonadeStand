@@ -12,12 +12,12 @@ namespace LemondStandTest
             Console.WriteLine("");
 
         }
-        public static string MainMenu()
+        public static int MainMenu()
         {
             Console.WriteLine("How long would you like to play?");
-            Console.WriteLine("Right now is only 1 day. Sorry");
-            Console.WriteLine("Please press '1'.");
-            return Console.ReadLine();
+            Console.WriteLine("1 or 7 days");
+            Console.WriteLine("Please press '1' or '7'.");
+            return int.Parse(Console.ReadLine());
         }
 
 
@@ -73,7 +73,7 @@ namespace LemondStandTest
             Console.WriteLine($"Total Lemons in Recipe:        {playerOne.recipe.recipeLemonsTotal}   ");
             Console.WriteLine($"Total Cups O' Sugar in Recipe: {playerOne.recipe.recipeSugarTotal}    ");
             Console.WriteLine($"Total Ice Cubes in Recipe:     {playerOne.recipe.recipeIceCubesTotal} ");
-            if (playerOne.recipe.recipeLemonsTotal > 1)
+            if (playerOne.recipe.recipeLemonsTotal > 1 && playerOne.recipe.recipeSugarTotal > 1)
             {
                 Console.WriteLine("Grandma's Recipe");
                 return "Grandma's Recipe";
@@ -85,6 +85,12 @@ namespace LemondStandTest
                 Console.WriteLine("Yucky Recipe ");
                 return "Yucky Recipe";
             }
+        }
+        public static int AskForTheNumberOfPlayDays()
+        {
+            Console.WriteLine("How many days will you be playing? (up to 7 days)");
+            return int.Parse(Console.ReadLine());
+
         }
         public static void Rules()
         {
