@@ -18,7 +18,7 @@ namespace LemondStandTest
         {
 
             Random random = new Random();
-            List<string> weatherforecast = new List<string> { "sunny", "cloudy", };
+            List<string> weatherforecast = new List<string> { "sunny", "cloudy"};
             int i = random.Next(weatherforecast.Count);
             Console.WriteLine(weatherforecast[i]);
 

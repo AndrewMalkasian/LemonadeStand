@@ -6,19 +6,21 @@ namespace LemondStandTest
 {
 
 
-         public class CustomerTraits : Customer
+         public class CustomerTraits
          {
             public string name;
             public string recipe;
             public string weather;
             public int temp;
-            public CustomerTraits(string name, string recipe, string weather, int temp)
+            public double walletSize;
+            public CustomerTraits(string name, string recipe, string weather, double walletSize)
             {
 
                 this.name = name;
                 this.recipe = recipe;
                 this.weather = weather;
-                this.temp = temp;
+                this.walletSize = walletSize;
+              
 
             }
          }

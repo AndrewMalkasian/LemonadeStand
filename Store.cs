@@ -12,65 +12,8 @@ namespace LemondStandTest
            
           
         }
-        public void BuyOrMakeLemonade(Player playerOne)
-        {
-            Console.WriteLine("Would you like to (1)buy supplies, (2) Make your lemonade's recipe?");
-            string userInput = Console.ReadLine();
-            if (userInput == "1")
-            {
-                PurchasingMenu(playerOne);
-            }
-            else if (userInput == "2")
-            {
-                playerOne.recipe.MainRecipe(playerOne);
-            }
-            else
-            {
-                BuyOrMakeLemonade(playerOne);
-            }
 
-        }
-        public void PurchasingMenu(Player playerOne)
-        {
-           
-            UI.PurchasingMenuOne(playerOne);
-            string userInput = Console.ReadLine();
-            foreach (StoreItem storeItem in itemsForSaleMenu)
-                {  
-                    if (userInput.Equals(storeItem.keyId))
-                    {   
-                        Console.WriteLine($"You've purchased {storeItem.name}.");
-                        playerOne.wallet -= storeItem.cost;
-                        if (storeItem.name.Contains("Paper Cups"))
-                        {
-                            playerOne.inventory.cupsOwned += storeItem.totalProductBought;
-            
-                        }
-                        else if (storeItem.name.Contains("Lemons"))
-                        {
-                            playerOne.inventory.lemonsOwned += storeItem.totalProductBought;
-                            
-                        }
-                        else if (storeItem.name.Contains("Sugar"))
-                        {
-                            playerOne.inventory.sugarOwned += storeItem.totalProductBought;
-                        }
-                        else if (storeItem.name.Contains("Ice Cube"))
-                        {
-                            playerOne.inventory.iceCubesOwned += storeItem.totalProductBought;
-                        
-                        }
-               
-                    }
-                       
-            };
-
-                    UI.PurchasingMenuTwo(playerOne);
-                    BuyOrMakeLemonade(playerOne);
-
-        }
-
-        List<StoreItem> itemsForSaleMenu = new List<StoreItem>()
+        public List<StoreItem> itemsForSaleMenu = new List<StoreItem>()
         {
 
 

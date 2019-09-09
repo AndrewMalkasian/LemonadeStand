@@ -9,7 +9,7 @@ namespace LemondStandTest
     {
         public Inventory inventory = new Inventory();
         public Recipe recipe = new Recipe();
-        public Store LemonadeStore = new Store();
+        public Store store = new Store();
 
         public double wallet = 20;
       

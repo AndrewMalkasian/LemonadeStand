@@ -9,8 +9,9 @@ namespace LemondStandTest
         {
 
 
-           Gameplay LemonadeStand = new Gameplay();
+            Gameplay LemonadeStand = new Gameplay();
             LemonadeStand.RunGame();
+
 
         }
     }

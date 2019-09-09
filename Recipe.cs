@@ -6,13 +6,15 @@ namespace LemondStandTest
 {
     public class Recipe
     {
-        Day day = new Day();
+     
 
         public int recipeLemonsTotal;
         public int recipeSugarTotal;
         public int recipeIceCubesTotal;
         public string grandmasRecipe;
         public string yuckyRecipe;
+        public string recipeCreated;
+        public string lemonRecipeCost;
         public Recipe()
         {
       
@@ -48,38 +50,24 @@ namespace LemondStandTest
             LemonRecipe(playerOne);
             SugarRecipe(playerOne);
             IceCubesRecipe(playerOne);
-            RecipePrinted(playerOne);
-           
+            recipeCreated = UI.RecipePrinted(playerOne);
+            
             
            
-           
         }
+
+
+
+
 
         //most likely goes into UI
-        public string RecipePrinted(Player playerOne)
-        {
-            Console.WriteLine($"Total Lemons in Recipe:        {playerOne.recipe.recipeLemonsTotal}   ");
-            Console.WriteLine($"Total Cups of Sugar in Recipe: {playerOne.recipe.recipeSugarTotal}    ");
-            Console.WriteLine($"Total Ice Cubes in Recipe:     {playerOne.recipe.recipeIceCubesTotal} ");
-            if ((playerOne.recipe.recipeLemonsTotal >= 1 && playerOne.recipe.recipeLemonsTotal <= 5) && (playerOne.recipe.recipeSugarTotal >= 1 && playerOne.recipe.recipeSugarTotal <= 5) && playerOne.recipe.recipeIceCubesTotal > 0)
-            {
-                Console.WriteLine("grandma's recipe");
-                return grandmasRecipe;
-
-            }
-
-            else
-            {
-                Console.WriteLine("yucky recipe ");
-                return yuckyRecipe;
-            }
 
 
-        }
+    }
 
        
 
         
 
-    }
 }
+
