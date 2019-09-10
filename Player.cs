@@ -11,18 +11,19 @@ namespace LemondStandTest
         public Recipe recipe = new Recipe();
         public Store store = new Store();
 
-        public double wallet = 20;
+        public double startingWallet = 20;
+        public int earnings;
 
 
         public Player()
         { 
-         
+        
             
         }
 
-        public void StockingInventory()
+        public void Earnings()
         {
-
+            earnings = startingWallet - totalCosts + customerEarnings;  
         }
        
 

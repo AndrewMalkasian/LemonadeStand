@@ -25,7 +25,7 @@ namespace LemondStandTest
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("You get to Wal-Mart early in the morning before the day");
-            Console.WriteLine($"Player's current capital: {playerOne.wallet}");
+            Console.WriteLine($"Player's current capital: {playerOne.startingWallet}");
             Console.WriteLine("You have the option to buy the following:");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("1 : 25  Paper Cups    |$  .77");
@@ -53,7 +53,7 @@ namespace LemondStandTest
             Console.WriteLine("---------------------");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("--CURRENT INVENTORY--");
-            Console.WriteLine($"NOTE: Last chance to buy! Player's current capital: ${playerOne.wallet}");
+            Console.WriteLine($"NOTE: Last chance to buy! Player's current capital: ${playerOne.startingWallet}");
             Console.WriteLine($"Cups: {playerOne.inventory.cupsOwned}");
             Console.WriteLine($"Lemons: {playerOne.inventory.lemonsOwned}");
             Console.WriteLine($"Cups o' Sugar: {playerOne.inventory.sugarOwned}");
@@ -101,6 +101,25 @@ namespace LemondStandTest
             Console.WriteLine($"Ice Cubes: {playerOne.inventory.iceCubesOwned}");
         }
 
+        public static int HowMuchSugarWouldYouLike()
+        {
+            Console.WriteLine("How many Sugar should you use?");
+           return Convert.ToInt32(Console.ReadLine());
+        }
+
+        public static int HowMuchLemonsWouldYouLike()
+        {
+            Console.WriteLine("How many Lemons should you use?");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        public static int HowManyIceCubesWouldYouLike()
+        {
+            Console.WriteLine("How many Ice Cubes should you use?");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+       
         public static void Rules()
         {
             //TODO: MAKE RULES

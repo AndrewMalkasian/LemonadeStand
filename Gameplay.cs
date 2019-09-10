@@ -19,6 +19,7 @@ namespace LemondStandTest
         }
         public void RunGame()
         {
+            UI.StartingInventoryView(playerOne);
             int userInput = UI.AskForTheNumberOfPlayDays();
             if (userInput <= 7)
             { 
@@ -68,7 +69,7 @@ namespace LemondStandTest
                 if (userInput.Equals(storeItem.keyId))
                 {
                     Console.WriteLine($"You've purchased {storeItem.name}.");
-                    playerOne.wallet -= storeItem.cost;
+                    playerOne.startingWallet -= storeItem.cost;
                     if (storeItem.name.Contains("Paper Cups"))
                     {
                         playerOne.inventory.cupsOwned += storeItem.totalProductBought;

@@ -76,8 +76,8 @@ namespace LemondStandTest
             foreach (CustomerTraits customer in buyingCustomers)
             {
                 Console.WriteLine(customer.name);
-                playerOne.wallet += customer.walletSize;
-                Console.WriteLine($"{customer.walletSize} has been added to your Player wallet {playerOne.wallet}");
+                playerOne.startingWallet += customer.walletSize;
+                Console.WriteLine($"{customer.walletSize} has been added to your Player wallet {playerOne.startingWallet}");
                 
 
             };
