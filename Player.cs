@@ -21,10 +21,12 @@ namespace LemondStandTest
             
         }
 
-        public void Earnings()
-        {
-            earnings = startingWallet - totalCosts + customerEarnings;  
-        }
+
+        //didn't have time to finish this:
+        //public void Earnings()
+        //{
+        //    earnings = startingWallet - totalCosts + customerEarnings;  
+        //}
        
 
 

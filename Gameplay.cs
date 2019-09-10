@@ -10,11 +10,13 @@ namespace LemondStandTest
         public Day day;
         public string recipeCreated;
         public int daysPlaying;
+        public bool willContinueShopping;
 
         public Gameplay()
         {
             playerOne = new Player();
             day = new Day();
+            willContinueShopping = true;
 
         }
         public void RunGame()
@@ -30,7 +32,7 @@ namespace LemondStandTest
             }
             else
             {
-                Console.WriteLine("You only have the stamina to go 7 days.");
+                Console.WriteLine("You only have the stamina to go 7 days. Please choose a number between 1 and 7.");
                 RunGame();
             }
 
@@ -44,7 +46,13 @@ namespace LemondStandTest
             string userInput = UI.WouldYouLikeToBuyOrMakeYourRecipe();
             if (userInput == "1")
             {
-                PurchasingMenu(playerOne);
+                while (willContinueShopping)
+                {
+                    PurchasingMenu(playerOne);
+                    WantsToShop();
+                }
+
+                BuyOrMakeLemonade(playerOne);
             }
             else if (userInput == "2")
             {
@@ -60,6 +68,26 @@ namespace LemondStandTest
 
         }
 
+
+        public void WantsToShop()
+        {
+            Console.WriteLine("Continue shopping? yes (1) or go to your recipe (2)");
+            string userInput = Console.ReadLine();
+            if (userInput == "1")
+            {
+                willContinueShopping = true;
+            }
+            else if (userInput == "2")
+            {
+                willContinueShopping = false;
+                playerOne.recipe.MainRecipe(playerOne);
+            }
+            else
+            {
+                Console.WriteLine("enter 1 or 2. I don't have time for this.");
+                WantsToShop();
+            }
+        }
         public void PurchasingMenu(Player playerOne)
         {
             string userInput = UI.PurchasingMenuOne(playerOne);
@@ -95,7 +123,6 @@ namespace LemondStandTest
             };
 
             UI.PurchasingMenuTwo(playerOne);
-            BuyOrMakeLemonade(playerOne);
 
         }
 

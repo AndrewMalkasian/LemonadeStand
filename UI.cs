@@ -58,6 +58,7 @@ namespace LemondStandTest
             Console.WriteLine($"Lemons: {playerOne.inventory.lemonsOwned}");
             Console.WriteLine($"Cups o' Sugar: {playerOne.inventory.sugarOwned}");
             Console.WriteLine($"Ice Cubes: {playerOne.inventory.iceCubesOwned}");
+            Console.WriteLine("enter another selection?");
 
         }
 

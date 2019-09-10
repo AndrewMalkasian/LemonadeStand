@@ -21,11 +21,11 @@ namespace LemondStandTest
 
         public void LemonShelfLife()
         {
-         // if ()
+         // TODO: remove from inventory after 1 day
         }
         public void SugarShelfLife()
         {
-            //TODO: remove from inventory after 1 days
+            //TODO: remove from inventory after 2 days
         }
         public void IceCubeShelfLife()
         {
